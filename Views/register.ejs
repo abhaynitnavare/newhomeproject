@@ -1,0 +1,115 @@
+
+
+
+
+<html>
+    <head>
+        <title><%= title  %></title>
+        <style>
+            .layout{
+                display: flex;
+                width: 70%;
+                margin:  auto;
+                margin-top: 150px;
+            }
+            .lay1{
+                width: 50%;
+                padding: 100px;
+                box-sizing: border-box;
+                /* border: 1px solid gray; */
+                background: linear-gradient(180deg, blue,pink) ;
+                font-size: 30px;
+                color: aliceblue;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+
+            }
+            .formElem{
+                width: 40%;
+                text-align: center;
+                border: 2px solid grey;
+                padding: 20px 5px;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+
+            .formElem label{
+                
+                width: 100px;
+                display: inline-block;
+                text-align: justify;
+            }
+            .formElem input{
+                width: 60%;
+                padding: 8px;
+                /* border-radius: 20px; */
+                /* padding-left: 10px; */
+            }
+            button{
+                width: 60%;
+                /* height: 30px; */
+                /* border-radius: 20px; */
+                background-color:#0078D8;
+                border: none;
+                padding: 10px;
+            }
+            h2{
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+<!-- Login Form -->
+<div class="layout">
+    <div class="lay1">
+        <h2>Welcome to Dream home</h2>
+    </div>
+    <div class="formElem">
+        <h2>Register Form</h2>
+
+        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
+            <!-- <form action="/auth/register" method="post" enctype="multipart/form-data"> -->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name"  name="Name" placeholder="name">
+                </div> <br><br>
+        
+                <div class="mb-3">
+                    <label for="exampleFormControlInput2" class="form-label">Username</label>
+                    <input type="email" name="Email" class="form-control" id="email" placeholder="name@example.com">
+                  </div>
+                  <br><br>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput4" class="form-label">Mobile No</label>
+                    <input type="number" name="MobileNo" class="form-control" id="mobileNo" placeholder="mobile no" >
+                  </div>
+                  <br> <br>
+        
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Password</label>
+                    <input type="password" name="Password" class="form-control" id="password" placeholder="password">
+                  </div>
+                  <br> <br>
+        
+                 
+        
+                  <button type="submit">Submit</button>
+            </form>
+     
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <script>
+    document.getElementById('myForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        console.log(Object.fromEntries(formData)); // Log the form data before submitting
+        event.target.submit(); // Submit the form
+    });
+</script> -->
+</html>

@@ -1,0 +1,26 @@
+<%- include('./includes/heder.ejs') %>
+
+
+
+
+<div class="homeproduct">
+    <%  data.forEach(element => { %>
+        <div class="card">
+            <img src=<%= element.img%> alt="">
+            <h3>Price:<%= element.price %></h3>
+            <p>Sqft:<%= element.sqft %></p>
+            <p>Location: <%= element.location%></p>
+            <!-- <p>description:<%# element.description %></p> -->
+            <button class="onrentbutton">Get on Rent</button>
+        </div>
+    <% }) %>
+    </div>
+
+
+
+
+
+
+
+
+<%- include('./includes/footer.ejs') %>

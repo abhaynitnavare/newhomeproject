@@ -1,0 +1,82 @@
+<%- include('./includes/heder.ejs') %>
+
+  <style>
+    .formdivpost {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 80vh;
+    }
+    form{
+      background-color: rgb(14, 216, 186);
+      border: 1px solid black;
+      border-radius: 25px;
+      padding: 20px;
+      padding-right: 0px;
+      width: 350px;
+      height: 300px;
+      justify-content: center;
+    }
+
+    #mobilenoinp {
+      width: 300px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    #locationinp {
+      width: 300px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    #priceinp {
+      width: 300px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button{
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      background-color: #0078Db;
+      border: none;
+      margin-top: 20px;
+    }
+    .buttonflex-postproperty{
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+  </style>
+
+
+
+  <div class="formdivpost">
+    <form action="/submitProperty" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="mobileNo">Mobile Number</label> <br>
+        <input type="tel" name="mobileNo" id="mobilenoinp" placeholder="Enter your MobileNo" required>
+      </div> 
+
+      <div>
+        <label for="location">Location</label> <br>
+        <input type="text" name="location" id="locationinp" placeholder="Enter your Location" required>
+      </div>
+      <div>
+        <label for="price">Price</label> <br>
+        <input type="number" name="price" id="priceinp" placeholder="Enter your Price" required>
+      </div>
+      <div>
+        <label for="image">Property Image:</label> 
+        <input type="file" name="image" accept="image/*" id="propimginp" required>
+      </div>
+      <div class="buttonflex-postproperty">
+        <button type="submit" >Submit Property</button>
+      </div>
+    </form>
+  </div>
+
+
+  <%- include('./includes/footer.ejs') %>

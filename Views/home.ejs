@@ -1,0 +1,33 @@
+<!-- header -->
+<%- include('./includes/heder.ejs') %>
+
+
+<div class="heading">
+    <h3>Find a home you'll <Span>Love</Span></h3>
+</div>
+
+<div class="homeproduct">
+    <%  data.forEach(element => { %>
+        <div class="card">
+            <img src=<%= element.img%> alt="">
+            <h3>Price:<%= element.price %></h3>
+            <p>Sqft:<%= element.sqft %></p>
+            <p>Location: <%= element.location%></p>
+            <!-- <p>description:<%# element.description %></p> -->
+            <button>Buy now</button>
+        </div>
+    <% }) %>
+    </div>
+
+
+
+
+    
+<!-- footer -->
+<%- include('./includes/footer.ejs') %>
+
+
+
+
+
+    

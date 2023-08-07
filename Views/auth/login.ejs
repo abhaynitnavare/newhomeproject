@@ -1,0 +1,98 @@
+   <style>
+      .bgcolor{
+        /* background-color: black; */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+
+        /* opacity: 0.5; */
+    }
+    .bgcolor form{
+        background-color: rgb(250, 247, 247);
+        position: absolute;
+        top: 25%;
+        left: 40%;
+        padding: 30px;
+        border: 1px solid black;
+        
+
+    }
+    .bgcolor .inp1 {
+        width: 300px;
+        padding: 10px;
+
+    }
+    .checkboxflex{
+        display: flex;
+    }
+    .buttonloginform{
+        padding: 10px;
+        
+        border: none;
+        width: 150px;
+    }
+    .forflexbutton{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .forflexbutton button{
+        background-color: #0078Db;
+        width: 300px;
+    }
+    form h3{
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .DonthaveAcount{
+        text-align: center;
+    }
+    .DonthaveAcount p a{
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+    .DonthaveAcount p{
+        margin-top: 0px;
+    }
+   </style>
+   
+   
+   <div class="bgcolor" id="mainform">
+
+        <form action="/auth" method="post" id="auth-login">
+    
+            <h3>Login</h3>
+        
+    
+            
+            <input class="inp1" id="Emailinp" name="Email" type="text" placeholder="Enter your Email"> <br><br>
+        
+            
+            <input class="inp1" id="Passwordinp" name="Password" type="text" placeholder="Enter your password"> <br> 
+        
+        
+           <div class="checkboxflex">
+            <input type="checkbox"> 
+            <p>Remember me </p>
+           </div>
+        
+            <div class="forflexbutton">
+                <button class="buttonloginform" type="submit">Login</button> 
+            </div><br>
+            <div class="DonthaveAcount">
+               <p> don't have a account <a href="/submit">Register</a></p>
+    
+            </div>
+        
+            <!-- midelware helps to transfer data from frontend to backend  -->
+        
+        
+        
+        
+        
+        
+        </form >
+    </div> 
