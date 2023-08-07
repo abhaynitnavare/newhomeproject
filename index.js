@@ -1,10 +1,11 @@
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const multer = require('multer');
+const path = require('path'); // Import the path module
 
 
 
@@ -12,6 +13,7 @@ const port = 4000
 
 const app = express();
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, 'public')));
 
 const upload = multer({ dest: 'uploads/' });
 
@@ -47,7 +49,7 @@ app.get('', (req, res) => {
     productModel.find().then(mdbdata => {
         // console.log(mdbdata)
         const authenticated = req.session.authenticated || false;
-        res.render('Home', { title: "Home Page", project: "home", authenticated: authenticated, data: mdbdata })
+        res.render('index', { title: "Home Page", project: "home", authenticated: authenticated, data: mdbdata })
     })
 
 })
